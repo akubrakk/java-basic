@@ -1,4 +1,4 @@
-package com.test;
+package com.lesson3;
 
 import static java.lang.Math.addExact;
 
