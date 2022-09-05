@@ -11,9 +11,12 @@ public class Solution1 {
     }
 
     public static class Cow extends Animal{
+
+        String name;
+
         @Override
         public String getName() {
-            return this.getName();
+            return this.name();
         }
     }
 }

@@ -21,8 +21,6 @@ public class Solution5 {
             return "Dog";
         } else if (o instanceof Whale) {
             return "Whale";
-        } else if (o instanceof Pig) {
-            return "Pig";
         } else {
             return "Unknown animal";
         }
