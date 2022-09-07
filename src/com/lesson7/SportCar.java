@@ -8,6 +8,6 @@ public class SportCar extends Car{
     @Override
     public void setEngine() {
         System.out.println("SportCar engine: ");
-        System.out.println("Sport ");
+        engine.setEngine();
     }
 }
