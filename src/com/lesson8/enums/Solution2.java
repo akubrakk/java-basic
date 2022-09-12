@@ -21,14 +21,15 @@ public class Solution2 {
         SATURDAY(6),
         SUNDAY(7);
 
-        private int dayOfWeek;
+        private final int dayOfWeek;
 
         Week(int dayOfWeek) {
+
             this.dayOfWeek = dayOfWeek;
         }
 
-        public void getDayOfWeek() {
-            System.out.println(dayOfWeek);
+        public int getDayOfWeek() {
+            return dayOfWeek;
         }
 
     }

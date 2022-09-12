@@ -45,6 +45,6 @@ public class Cat {
         Cat cat1 = new Cat("Tom", 5, 3);
         Cat cat2 = new Cat("Tom", 5, 4);
         System.out.println("Cats have the same name and age: " + cat1.equals(cat2));
-        System.out.println(cat1.toString());
+        System.out.println(cat1);
     }
 }

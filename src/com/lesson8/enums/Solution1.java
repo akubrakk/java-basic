@@ -10,8 +10,8 @@ public class Solution1 {
     Example: A - 1, B - 2
      */
     public static void main(String[] args) {
-        System.out.print("A" + " - ");
-        System.out.println(Alphabet.A.getLetterPosition());
+        Alphabet a = Alphabet.A;
+        System.out.println(a + " " + a.getLetterPosition());
     }
 
     public enum Alphabet {
