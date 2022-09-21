@@ -1,5 +1,7 @@
 package com.lesson11;
 
+import static com.lesson11.Exceptions.MyExceptions.checkValue;
+
 public class Exceptions {
     /*
     1. Create the custom exception and extend it from IllegalArgumentException class
@@ -12,7 +14,7 @@ public class Exceptions {
         6.2. using try catch block pass int < 0, catch this exception and print to the console "Exception was caught"
         6.3. call this method with int < 0
      */
-    public static void main(String[] args) {
+    public static void main(String[] args){
         System.out.println(checkValue(3));
         try {
             System.out.println(checkValue(-5));
@@ -22,11 +24,13 @@ public class Exceptions {
         System.out.println(checkValue(-3));
     }
 
-    private static String checkValue(int value) throws ArrayIndexOutOfBoundsException {
-        if (value < 0) {
-            throw new ArrayIndexOutOfBoundsException("The value should be more than zero");
-        } else {
-            return "It`s ok";
+    public static class MyExceptions extends IllegalArgumentException {
+        public static String checkValue(int value) throws IllegalArgumentException {
+            if (value < 0) {
+                throw new IllegalArgumentException("The value should be more than zero");
+            } else {
+                return "It`s ok";
+            }
         }
     }
 }
