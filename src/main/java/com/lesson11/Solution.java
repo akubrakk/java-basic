@@ -1,8 +1,6 @@
 package com.lesson11;
 
-import static com.lesson11.Exceptions.MyExceptions.checkValue;
-
-public class Exceptions {
+public class Solution {
     /*
     1. Create the custom exception and extend it from IllegalArgumentException class
     2. Create the method which takes and integer value and print it to the console
@@ -18,20 +16,19 @@ public class Exceptions {
         System.out.println(checkValue(3));
         try {
             System.out.println(checkValue(-5));
-        } catch (Exception e) {
+        } catch (MyExceptions e) {
             System.out.println("Exception was caught");
         }
         System.out.println(checkValue(-3));
     }
 
-    public static class MyExceptions extends IllegalArgumentException {
-        public static String checkValue(int value) throws IllegalArgumentException {
+        public static String checkValue(int value) throws MyExceptions {
             if (value < 0) {
-                throw new IllegalArgumentException("The value should be more than zero");
+                throw new MyExceptions ();
             } else {
                 return "It`s ok";
             }
         }
     }
-}
+
 
